@@ -1,0 +1,37 @@
+name: Build LaTeX CVs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Compile LaTeX PDFs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile 1-Page CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          args: -pdf -interaction=nonstopmode
+
+      - name: Compile 2-Page Extended CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv_extended.tex
+          args: -pdf -interaction=nonstopmode
+
+      - name: Upload Compiled PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-cv-pdfs
+          path: |
+            cv.pdf
+            cv_extended.pdf
