@@ -1,6 +1,6 @@
 %-------------------------------------------------------------------------------
 % Giacomo Azzari - Curriculum Vitae (Extended 2-Page Version)
-% Comprehensive Engineering CV for Academic, European & R&D Applications
+% Comprehensive Engineering CV for Academic, European & Corporate Applications
 % Compiled with pdfLaTeX (TeX Live 2025)
 %-------------------------------------------------------------------------------
 
@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[left=1.45cm, right=1.45cm, top=1.35cm, bottom=1.35cm]{geometry}
+\usepackage[left=1.4cm, right=1.4cm, top=1.3cm, bottom=1.3cm]{geometry}
 \usepackage[english]{babel}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -20,13 +20,15 @@
 \usepackage{fontawesome5}
 \usepackage{microtype}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage[hidelinks]{hyperref}
 
 % --- COLOR PALETTE ---
 \definecolor{primary}{RGB}{15, 44, 89}        % Deep Professional Navy (#0F2C59)
 \definecolor{secondary}{RGB}{71, 85, 105}     % Slate Gray (#475569)
 \definecolor{textdark}{RGB}{30, 41, 59}       % Dark Charcoal body text (#1E293B)
-\definecolor{accent}{RGB}{29, 78, 216}        % Vibrant Sapphire (#1D4ED8)
+\definecolor{accent}{RGB}{29, 78, 216}        % Vibrant Sapphire for URLs (#1D4ED8)
 \definecolor{rulecolor}{RGB}{203, 213, 225}   % Soft divider line (#CBD5E1)
 
 \color{textdark}
@@ -56,7 +58,7 @@
   {\large\bfseries\color{primary}}
   {}{0em}{}
   [\vspace{-0.45em}\textcolor{rulecolor}{\titlerule[0.8pt]}\vspace{-0.2em}]
-\titlespacing*{\section}{0pt}{7pt}{3.5pt}
+\titlespacing*{\section}{0pt}{6.5pt}{3pt}
 
 % --- CUSTOM COMMANDS ---
 \newcommand{\resumeItem}[1]{%
@@ -78,7 +80,7 @@
   \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=2pt, topsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=1.8pt, topsep=1pt, parsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 % ==============================================================================
@@ -86,23 +88,44 @@
 % ==============================================================================
 \begin{document}
 
-% --- HEADER ---
-\begin{center}
+% --- HEADER WITH PHOTO ---
+\noindent
+\begin{minipage}[c]{0.79\textwidth}
     {\fontsize{24}{28}\selectfont\textbf{\textcolor{primary}{GIACOMO AZZARI}}} \\[4pt]
-    {\small\textbf{\textcolor{secondary}{Electronic Engineer \ \textbullet\ \ MSc Student at University of Padua \& Ghent University}}} \\[5pt]
+    {\small\textbf{\textcolor{secondary}{Electronic Engineer \ \textbullet\ \ MSc Student at University of Padua \& Ghent University}}} \\[6pt]
     {\footnotesize
         \faMapMarker*\ Montebelluna (TV) / Padua, Italy \quad\textbar\quad
-        \faPhone*\ (+39) 389\,598\,9445 \quad\textbar\quad
+        \faPhone*\ (+39) 389\,598\,9445 \\[3pt]
         \faEnvelope\ \href{mailto:giacomoazzari@gmail.com}{giacomoazzari@gmail.com} \quad\textbar\quad
         \faLinkedin\ \href{https://www.linkedin.com/in/giacomo-azzari}{linkedin.com/in/giacomo-azzari}
     }
-\end{center}
-\vspace{-6pt}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.19\textwidth}
+    \raggedleft
+    \IfFileExists{photo.png}{%
+        \begin{tikzpicture}
+            \node[circle, draw=rulecolor, line width=1pt, inner sep=0pt, minimum size=2.4cm,
+                  path picture={
+                      \node at (path picture bounding box.center) {
+                          \includegraphics[width=2.4cm,height=2.4cm]{photo.png}
+                      };
+                  }] {};
+        \end{tikzpicture}%
+    }{%
+        \begin{tikzpicture}
+            \node[circle, draw=rulecolor, dashed, line width=0.8pt, inner sep=0pt, minimum size=2.4cm, align=center] {
+                \footnotesize\textcolor{secondary}{Photo}
+            };
+        \end{tikzpicture}%
+    }
+\end{minipage}
+\vspace{-4pt}
 
 % --- EXECUTIVE PROFILE ---
 \section{Executive Profile}
 \small{
-Electronic Engineer currently pursuing a Master's Degree in Electronic Engineering at the \textbf{University of Padua}, enriched by an Erasmus+ exchange semester at \textbf{Ghent University (Universiteit Gent, Belgium)}. Specialized in advanced analog integrated circuit design, semiconductor microfabrication, high-frequency electromagnetic layout, and embedded edge systems. Demonstrates a strong foundation in physical acoustics and transducer engineering from bachelor's thesis research. Proven leadership, technical problem-solving, and communication abilities demonstrated through regional football refereeing and institutional IT management for the Italian Referees Association (AIA).
+Electronic Engineer currently enrolled in the Master's Degree program in Electronic Engineering at the \textbf{University of Padua}, enriched by an Erasmus+ exchange semester at \textbf{Ghent University (Universiteit Gent, Belgium)}. Specialized in advanced analog integrated circuit design, semiconductor microfabrication, high-frequency electromagnetic layout, and embedded edge systems. Solid experimental background in electroacoustics and transducer engineering developed during bachelor's thesis research. Proven leadership, rapid decision-making under intense pressure, and communication abilities demonstrated through regional football refereeing and institutional IT management for the Italian Referees Association (AIA).
 }
 
 % --- EDUCATION & ACADEMIC QUALIFICATIONS ---
@@ -119,7 +142,7 @@ Electronic Engineer currently pursuing a Master's Degree in Electronic Engineeri
   {Universiteit Gent (Ghent University) --- Faculty of Engineering \& Architecture}{Ghent, Belgium}
   {Erasmus+ Exchange: MSc in Electrical Engineering (Electronic Circuits \& Systems)}{Sep 2026 -- Jan 2027}
   \resumeItemListStart
-    \resumeItem{\textbf{Academic Load:} 30 ECTS completed entirely in English across 4 specialized graduate modules:}
+    \resumeItem{\textbf{Academic Curriculum:} 30 ECTS completed entirely in English across 4 graduate modules:}
     \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt, topsep=1pt]
       \small
       \item \textbf{Advanced Analog Design:} Transistor-level analog circuit design, multi-stage amplifier and OTA topologies, frequency compensation techniques, noise budgeting, and circuit verification.
@@ -134,15 +157,15 @@ Electronic Engineer currently pursuing a Master's Degree in Electronic Engineeri
   {Bachelor's Degree in Electronic Engineering (Laurea Triennale in Ingegneria Elettronica)}{Sep 2022 -- Sep 2025}
   \resumeItemListStart
     \resumeItem{\textbf{Final Grade:} 99/110 (183 ECTS, EQF Level 6).}
-    \resumeItem{\textbf{Bachelor Thesis:} \textit{``Design and development of underwater acoustic transducers''} --- Supervisor: Prof. Filippo Campagnaro. Investigated electroacoustic transducer geometries, piezoelectric transduction mechanisms, and impedance matching for underwater acoustic telemetry.}
-    \resumeItem{\textbf{Coursework:} Microelectronics, Analog \& Digital Electronics, Signals \& Systems, Circuit Theory, Automatic Controls.}
+    \resumeItem{\textbf{Bachelor Thesis:} \textit{``Design and development of underwater acoustic transducers''} --- Supervisor: Prof. Filippo Campagnaro. Investigated electroacoustic transducer geometries, piezoelectric transduction mechanisms, and acoustic impedance matching for underwater acoustic telemetry links.}
+    \resumeItem{\textbf{Core Coursework:} Microelectronics, Analog \& Digital Electronics, Signals \& Systems, Circuit Theory, Automatic Control Systems, Electromagnetic Fields, Computer Architectures.}
   \resumeItemListEnd
 
 \resumeSubheading
   {Liceo Scientifico Bilinguistico ``Primo Levi''}{Montebelluna (TV), Italy}
   {High School Diploma in Scientific Studies (Bilingual Scientific Curriculum)}{Jul 2022}
   \resumeItemListStart
-    \resumeItem{\textbf{Final Grade:} 90/100. Rigorous curriculum in advanced mathematics, physics, and bilingual German language.}
+    \resumeItem{\textbf{Final Grade:} 90/100. Rigorous curriculum in advanced mathematics, physics, and intensive bilingual German language studies.}
   \resumeItemListEnd
 
 % --- TECHNICAL COMPETENCIES ---
@@ -150,7 +173,7 @@ Electronic Engineer currently pursuing a Master's Degree in Electronic Engineeri
 \begin{itemize}[leftmargin=1.15em, itemsep=2pt, topsep=1pt, parsep=0pt]
     \small{
     \item{\textbf{Circuit Design \& EDA Tools:} AMD Vivado IDE, STM32CubeIDE, MATLAB \& Simulink, LabVIEW, Wolfram Mathematica, SPICE circuit simulation, Transistor-Level Analog IC Design, RF Layout \& Parasitic Modeling, Microfabrication / MEMS.}
-    \item{\textbf{Programming \& Hardware Description:} C, C++, Python (Data acquisition \& test automation), VHDL, Verilog-HDL, Java, Kotlin, HTML, \LaTeX, Linux, Git.}
+    \item{\textbf{Programming \& Hardware Description:} C, C++, Python (Data acquisition \& test automation), VHDL, Verilog-HDL, Java, Kotlin, HTML, LaTeX, Linux, Git, Bash.}
     \item{\textbf{Embedded Systems \& IoT:} ARM Cortex-M (STM32), Low-Power Edge Node Architectures, FreeRTOS, Peripheral Interfaces (I2C, SPI, UART, ADC, DAC, PWM, DMA).}
     \item{\textbf{Laboratory \& Measurement:} Digital Storage Oscilloscopes (DSO), Logic Analyzers, Spectrum Analyzers, Signal Generators, SMD Soldering.}
     }
@@ -164,7 +187,7 @@ Electronic Engineer currently pursuing a Master's Degree in Electronic Engineeri
 \resumeProjectHeading
   {\textbf{Underwater Acoustic Transducers Design \& Development} \ \textbar\ \ \normalfont{\textit{Acoustics, Materials, Transduction}}}{BSc Thesis Research Project}
   \resumeItemListStart
-    \resumeItem{Researched and modeled electroacoustic transducer topologies for underwater wireless communication and telemetry.}
+    \resumeItem{Researched and modeled electroacoustic transducer topologies for underwater wireless communication and telemetry links.}
     \resumeItem{Analyzed piezoelectric materials, resonance frequencies, and acoustic impedance matching layers between transducer and water medium.}
     \resumeItem{Performed parametric frequency-response simulations and characterization under the supervision of Prof. Filippo Campagnaro.}
   \resumeItemListEnd
@@ -212,18 +235,31 @@ Electronic Engineer currently pursuing a Master's Degree in Electronic Engineeri
     \resumeItem{\textbf{Youth Educator (Sep 2020--Present):} Lead weekly formation sessions, mentoring adolescents in teamwork and ethical values; supervise summer educational camps and leadership retreats.}
   \resumeItemListEnd
 
+% --- WORK & OPERATIONAL EXPERIENCE ---
+\section{Work \& Operational Experience}
+
+\resumeSubheading
+  {Catering \& Banqueting Company ``Rangiarse Srl''}{Mogliano Veneto (TV), Italy}
+  {Service Staff \& Banquet Hall Operations}{Nov 2019 -- Present}
+  \resumeItemListStart
+    \resumeItem{Coordinated banquet hall assembly, event logistics, and direct customer service during large-scale private and corporate events. Demonstrates hands-on work ethic, multitasking under pressure, situational problem-solving, and team dependability.}
+  \resumeItemListEnd
+
 % --- CERTIFICATIONS & LANGUAGES ---
 \section{Certifications \& Languages}
-\begin{itemize}[leftmargin=1.15em, itemsep=2.5pt, topsep=1pt, parsep=0pt]
+\begin{itemize}[leftmargin=1.15em, itemsep=2pt, topsep=1pt, parsep=0pt]
     \small{
     \item{\textbf{Occupational Health \& Safety (Laboratories):} Certified for Laboratory Personnel --- \textbf{HIGH Risk Class} (Università degli Studi di Padova, pursuant to Art. 37 D.Lgs. 81/08; Valid until Oct 2029).}
     \item{\textbf{General Workplace Safety:} University of Padua safety certification (pursuant to Art. 37 D.Lgs. 81/08).}
     \item{\textbf{Languages:}
       \textbf{Italian} (Native speaker),
-      \textbf{English} (Professional Working Proficiency --- Cambridge First Certificate in English / FCE, CEFR B2; all graduate coursework and exams at Ghent University conducted in English),
-      \textbf{German} (B1 level --- 5-year bilingual high school program; Goethe-Zertifikat),
-      \textbf{Spanish} (B1 level).}
+      \textbf{English} (Professional Working Proficiency --- Cambridge First Certificate in English / FCE, CEFR B2; all graduate coursework, laboratory sessions, and examinations at Ghent University conducted in English),
+      \textbf{German} (B1 level --- 5-year bilingual scientific high school curriculum).}
     }
 \end{itemize}
+
+% --- PRIVACY STATEMENT (GDPR) ---
+\vfill
+\noindent\centering{\footnotesize\textcolor{secondary}{\textit{In compliance with the Italian Legislative Decree no. 196/2003 and EU GDPR 2016/679, I hereby authorize the processing of my personal data.}}}\par
 
 \end{document}

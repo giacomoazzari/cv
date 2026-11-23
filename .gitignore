@@ -22,3 +22,8 @@
 # Editor settings
 .vscode/
 .idea/
+
+# Local archives and files not meant for GitHub
+local_archive/
+archive/
+*.zip

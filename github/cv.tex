@@ -1,0 +1,204 @@
+%-------------------------------------------------------------------------------
+% Giacomo Azzari - Curriculum Vitae (1-Page Professional Engineering Resume)
+% Optimized for ATS, Industry & Research (e.g. IMEC / Semiconductor / Embedded)
+% Compiled with pdfLaTeX (TeX Live 2025)
+%-------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}              % Clean, modern sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[left=1.25cm, right=1.25cm, top=1.1cm, bottom=1.1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+% --- COLOR PALETTE ---
+\definecolor{primary}{RGB}{15, 44, 89}        % Deep Professional Navy (#0F2C59)
+\definecolor{secondary}{RGB}{71, 85, 105}     % Slate Gray (#475569)
+\definecolor{textdark}{RGB}{30, 41, 59}       % Dark Charcoal body text (#1E293B)
+\definecolor{accent}{RGB}{29, 78, 216}        % Vibrant Sapphire for URLs (#1D4ED8)
+\definecolor{rulecolor}{RGB}{203, 213, 225}   % Soft divider line (#CBD5E1)
+
+\color{textdark}
+\pagestyle{empty}
+
+% --- HYPERREF SETUP ---
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=primary,
+    pdftitle={Giacomo Azzari - Curriculum Vitae},
+    pdfauthor={Giacomo Azzari},
+    pdfsubject={Electronic Engineering Resume},
+    pdfkeywords={Electronic Engineering, Embedded Systems, Analog IC, Microfabrication, RF, VHDL, C++, STM32}
+}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}
+  {\large\bfseries\color{primary}}
+  {}{0em}{}
+  [\vspace{-0.45em}\textcolor{rulecolor}{\titlerule[0.8pt]}\vspace{-0.2em}]
+\titlespacing*{\section}{0pt}{5pt}{2.5pt}
+
+% --- CUSTOM COMMANDS ---
+\newcommand{\resumeItem}[1]{%
+  \item\small{{#1}\vspace{-1.5pt}}%
+}
+
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{1pt}
+  \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textcolor{secondary}{\small #2} \\
+    \textit{\small #3} & \textcolor{secondary}{\textit{\small #4}} \\
+  \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{%
+  \vspace{1pt}
+  \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textcolor{secondary}{\textit{\small #2}} \\
+  \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=1.3pt, topsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1.5pt}}
+
+% ==============================================================================
+% DOCUMENT STARTS HERE
+% ==============================================================================
+\begin{document}
+
+% --- HEADER WITH PHOTO ---
+\noindent
+\begin{minipage}[c]{0.79\textwidth}
+    {\fontsize{22}{26}\selectfont\textbf{\textcolor{primary}{GIACOMO AZZARI}}} \\[3pt]
+    {\small\textbf{\textcolor{secondary}{Electronic Engineer \ \textbullet\ \ MSc Student at University of Padua \& Ghent University}}} \\[5pt]
+    {\footnotesize
+        \faMapMarker*\ Montebelluna (TV) / Padua, Italy \quad\textbar\quad
+        \faPhone*\ (+39) 389\,598\,9445 \\[2.5pt]
+        \faEnvelope\ \href{mailto:giacomoazzari@gmail.com}{giacomoazzari@gmail.com} \quad\textbar\quad
+        \faLinkedin\ \href{https://www.linkedin.com/in/giacomo-azzari}{linkedin.com/in/giacomo-azzari}
+    }
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.19\textwidth}
+    \raggedleft
+    \IfFileExists{photo.png}{%
+        \begin{tikzpicture}
+            \node[circle, draw=rulecolor, line width=1pt, inner sep=0pt, minimum size=2.3cm,
+                  path picture={
+                      \node at (path picture bounding box.center) {
+                          \includegraphics[width=2.3cm,height=2.3cm]{photo.png}
+                      };
+                  }] {};
+        \end{tikzpicture}%
+    }{%
+        \begin{tikzpicture}
+            \node[circle, draw=rulecolor, dashed, line width=0.8pt, inner sep=0pt, minimum size=2.3cm, align=center] {
+                \footnotesize\textcolor{secondary}{Photo}
+            };
+        \end{tikzpicture}%
+    }
+\end{minipage}
+\vspace{-4pt}
+
+% --- EDUCATION ---
+\section{Education}
+
+\resumeSubheading
+  {University of Padua}{Padua, Italy}
+  {Master's Degree in Electronic Engineering (Laurea Magistrale)}{Oct 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{\textbf{Specialization:} Advanced Analog Integrated Circuits, RF Electronics, Microtechnologies, and Embedded Systems.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Universiteit Gent (Ghent University) --- Faculty of Engineering \& Architecture}{Ghent, Belgium}
+  {Erasmus+ MSc Exchange Student (Electrical Engineering / Electronic Circuits \& Systems)}{Sep 2026 -- Jan 2027}
+  \resumeItemListStart
+    \resumeItem{\textbf{Completed 30 ECTS in English:} \textit{Advanced Analog Design} (transistor-level design, OTA topologies, noise, frequency compensation), \textit{IC Technology \& Microsystems} (semiconductor microfabrication, cleanroom flows, MEMS), \textit{Electromagnetic-aware High Frequency Design} (RF parasitics, transmission lines, SI), and \textit{Internet of Things} (low-power edge nodes).}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {University of Padua}{Padua, Italy}
+  {Bachelor's Degree in Electronic Engineering (Laurea Triennale in Ingegneria Elettronica)}{Sep 2022 -- Sep 2025}
+  \resumeItemListStart
+    \resumeItem{\textbf{Final Grade:} 99/110 (183 ECTS). Core curriculum: Microelectronics, Digital Systems, Signal Processing, Automatic Controls.}
+    \resumeItem{\textbf{Bachelor Thesis:} \textit{``Design and development of underwater acoustic transducers''} (Supervisor: Prof. Filippo Campagnaro). Researched piezoelectric transducer topologies, resonance modes, and impedance matching layers for underwater acoustic links.}
+  \resumeItemListEnd
+
+% Note: High School (Liceo Scientifico, 90/100) omitted on 1-page CV to maximize space for engineering depth; preserved on 2-page CV.
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{itemize}[leftmargin=1.15em, itemsep=1.3pt, topsep=1pt, parsep=0pt]
+    \small{
+    \item{\textbf{Hardware, EDA \& Simulation:} AMD Vivado IDE, STM32CubeIDE, MATLAB \& Simulink, LabVIEW, Wolfram Mathematica, SPICE simulation, Transistor-Level Analog IC Design, RF Layout \& Parasitic Modeling, Microfabrication / MEMS integration.}
+    \item{\textbf{Programming \& Hardware Description:} C, C++, Python (Automation \& data acquisition), VHDL, Verilog-HDL, Java, Kotlin, HTML, LaTeX, Git, Bash.}
+    \item{\textbf{Embedded Systems \& IoT:} ARM Cortex-M (STM32), Low-Power Edge Node Architectures, Sensor Interfacing (I2C, SPI, UART, ADC).}
+    \item{\textbf{Laboratory \& Workplace Safety:} Certified High-Risk Laboratory Safety (D.Lgs. 81/08, valid to 2029); Oscilloscopes, Logic Analyzers.}
+    \item{\textbf{Languages:} Italian (Native), English (Professional Working Proficiency, B2 CEFR / Cambridge FCE, full coursework in English at Ghent), German (B1, 5-year bilingual curriculum).}
+    }
+\end{itemize}
+
+% --- FEATURED ENGINEERING & ACADEMIC PROJECTS ---
+\section{Featured Engineering \& Academic Projects}
+
+\resumeProjectHeading
+  {\textbf{Underwater Acoustic Transducers Design \& Modeling} \ \textbar\ \ \normalfont{\textit{Acoustics, Materials, Transduction}}}{BSc Thesis Research Project}
+  \resumeItemListStart
+    \resumeItem{Modeled and evaluated piezoelectric transducer geometries and impedance matching layers for underwater wireless communication links.}
+    \resumeItem{Conducted electroacoustic characterization and parametric frequency response simulations under the supervision of Prof. Filippo Campagnaro.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Transistor-Level Advanced Analog CMOS IC Design} \ \textbar\ \ \normalfont{\textit{Cadence / SPICE, OTA, Analog IC}}}{Ghent University MSc Coursework}
+  \resumeItemListStart
+    \resumeItem{Engineered multi-stage CMOS Operational Transconductance Amplifiers (OTAs); optimized transistor biasing and gain-bandwidth product.}
+    \resumeItem{Implemented Miller frequency compensation to ensure $>60^\circ$ phase margin; performed thermal noise and PVT corner simulations.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Electromagnetic-Aware RF Design \& Signal Integrity} \ \textbar\ \ \normalfont{\textit{RF Layout, Transmission Lines, SI}}}{Ghent University MSc Coursework}
+  \resumeItemListStart
+    \resumeItem{Modeled microstrip transmission lines, differential pairs, and interconnect parasitics to minimize reflections and high-frequency EMI.}
+    \resumeItem{Conducted electromagnetic co-simulation for RF layout optimization and eye-diagram signal integrity validation.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Low-Power Embedded IoT Node Architecture} \ \textbar\ \ \normalfont{\textit{STM32, C, Low-Power, Sensor Telemetry}}}{Embedded Systems Project}
+  \resumeItemListStart
+    \resumeItem{Programmed STM32 firmware for edge sensor acquisition utilizing sleep states and DMA transfers to maximize battery endurance.}
+  \resumeItemListEnd
+
+% --- LEADERSHIP & ORGANIZATIONAL EXPERIENCE ---
+\section{Leadership \& Organizational Experience}
+
+\resumeSubheading
+  {Italian Referees Association (AIA) --- Castelfranco Veneto Branch}{Veneto, Italy}
+  {Board Member, IT Lead \& Regional Football Referee}{Jan 2020 -- Present}
+  \resumeItemListStart
+    \resumeItem{\textbf{Board Member \& IT Lead (2022--Present):} Managed branch IT infrastructure, official website, and administrative cloud accounts.}
+    \resumeItem{\textbf{Regional Referee (OTR, 2023--Present):} Officiated regional matches; developed critical decision-making and de-escalation under intense pressure.}
+    \resumeItem{\textbf{Honors \& Mentorship:} Awarded the \textit{``Manuel Bailo'' Award} as Best Referee (2022--2023 season); mentored newly qualified referees.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Azione Cattolica Italiana}{Montebelluna (TV), Italy}
+  {Youth Group Coordinator \& Educator}{Sep 2020 -- Present}
+  \resumeItemListStart
+    \resumeItem{Elected to the local Board of Directors; lead weekly educational and personal development programs for groups of 14--18 year-olds.}
+  \resumeItemListEnd
+
+\end{document}
