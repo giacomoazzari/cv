@@ -2,7 +2,7 @@
 
 PDFLATEX ?= $(shell which pdflatex 2>/dev/null || test -x /Library/TeX/texbin/pdflatex && echo /Library/TeX/texbin/pdflatex || echo pdflatex)
 
-.PHONY: all 1page 2page clean preview
+.PHONY: all 1page 2page clean preview publish
 
 all: 1page 2page
 
@@ -22,4 +22,7 @@ preview: cv.pdf
 	open cv.pdf
 
 clean:
-	rm -f *.aux *.log *.out *.toc *.fls *.fdb_latexmk *.synctex.gz cv_preview*.png
+	rm -f *.aux *.log *.out *.toc *.fls *.fdb_latexmk *.synctex.gz
+
+publish:
+	./publish.sh $(msg)
