@@ -1,96 +1,109 @@
-# Giacomo Azzari — Professional Engineering CV / Resume in LaTeX
+# Giacomo Azzari — Curriculum Vitae
 
-This repository contains a professional, ATS-friendly LaTeX Curriculum Vitae tailored for **Electronic Engineering**, **Embedded Systems**, and **Hardware/Firmware Engineering**.
+<div align="center">
 
----
+[![LaTeX](https://img.shields.io/badge/Document-LaTeX-blue.svg?logo=latex&logoColor=white)](cv.tex)
+[![Status](https://img.shields.io/badge/Status-MSc%20Student-success.svg)](#-about-me)
+[![UniPD](https://img.shields.io/badge/University-Padua-8B0000.svg)](https://www.unipd.it)
+[![Ghent University](https://img.shields.io/badge/Exchange-UGent%20FEA-1E64C8.svg)](https://www.ugent.be/ea/en)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Giacomo%20Azzari-0A66C2.svg?logo=linkedin)](https://www.linkedin.com/in/giacomo-azzari)
+[![Email](https://img.shields.io/badge/Email-giacomoazzari%40gmail.com-EA4335.svg?logo=gmail)](mailto:giacomoazzari@gmail.com)
 
-## 📄 Overview of Files
+**Electronic Engineer** specializing in **Analog Integrated Circuits**, **RF & High-Frequency Electronics**, **Semiconductor Microtechnologies**, and **Embedded Systems**.
 
-| File | Description |
-| :--- | :--- |
-| **`cv.tex`** | **1-Page Industry Resume** (High-impact, concise, optimized for tech & corporate ATS screening). |
-| **`cv.pdf`** | Compiled 1-page PDF ready for review and job applications. |
-| **`cv_extended.tex`** | **2-Page Comprehensive CV** (Detailed project breakdown, extended coursework, lab practicum, for European / academic / R&D applications). |
-| **`cv_extended.pdf`** | Compiled 2-page PDF. |
-| **`compile.sh`** | Compilation bash script for one-command builds. |
-| **`Makefile`** | Standard build tool support (`make`, `make 1page`, `make 2page`, `make clean`). |
+</div>
 
 ---
 
-## 🛠️ How to Compile
+## 📄 Curriculum Vitae Versions
 
-Both documents compile with **pdfLaTeX** using standard packages included in MacTeX / TeX Live 2025.
+Choose between the concise industry resume and the comprehensive academic/R&D curriculum:
 
-### Option 1: Using the compile script
-```bash
-# Compile both versions (1-page and 2-page)
-./compile.sh all
-
-# Compile only the 1-page version
-./compile.sh 1page
-
-# Compile only the 2-page version
-./compile.sh 2page
-
-# Clean auxiliary files (.aux, .log, .out)
-./compile.sh clean
-```
-
-### Option 2: Using Make
-```bash
-make          # Builds both cv.pdf and cv_extended.pdf
-make 1page    # Builds cv.pdf
-make 2page    # Builds cv_extended.pdf
-make clean    # Removes intermediate build artifacts
-```
-
-### Option 3: Direct `pdflatex` command
-```bash
-/Library/TeX/texbin/pdflatex -interaction=nonstopmode cv.tex
-/Library/TeX/texbin/pdflatex -interaction=nonstopmode cv_extended.tex
-```
-
-*(Note: Run twice to resolve hyperref links and outlines).*
+| Document | Type | Length | Best Suited For | Direct Link |
+| :--- | :--- | :---: | :--- | :--- |
+| **`cv.pdf`** | **Industry Resume** | **1 Page** | Fast-paced corporate ATS screening, tech recruitment, and industry engineering roles. Focused on key skills, impact, and engineering projects. | [📥 **View / Download 1-Page PDF**](cv.pdf) |
+| **`cv_extended.pdf`** | **Comprehensive CV** | **2 Pages** | Research laboratories, PhD/academic applications, European institutions, and technical deep-dives. Detailed course modules, cleanroom practicum, and extended projects. | [📥 **View / Download 2-Page PDF**](cv_extended.pdf) |
 
 ---
 
-## ✏️ Customization Guide
+## 👤 About Me
 
-### 1. Contact Information & Links
-In both `cv.tex` and `cv_extended.tex`, customize the header block:
-- **Phone:** Replace `+39 3XX XXXXXXX` with your actual phone number.
-- **LinkedIn:** Update `linkedin.com/in/giacomo-azzari` to your profile slug.
-- **GitHub:** Update `github.com/giacomoazzari` with your personal GitHub account.
-- **Location:** Configured as `Padua / Veneto, Italy`.
+I am an Electronic Engineer currently completing my Master's Degree (Laurea Magistrale) in **Electronic Engineering** at the **University of Padua**, enriched by an **Erasmus+ MSc exchange** at **Ghent University** (Faculty of Engineering & Architecture, Belgium). 
 
-### 2. Education & Thesis
-- **University of Padua (Università degli Studi di Padova)** is set as your Alma Mater.
-- Replace `[Insert Thesis Title, e.g., ...]` with the actual title of your Bachelor's thesis.
-- If you are enrolled in or completed a Master of Science (Laurea Magistrale), simply uncomment the provided `\resumeSubheading` block under the `\section{Education}`.
+My technical passion lies at the intersection of **transistor-level analog circuit design**, **RF microelectronics**, **semiconductor cleanroom microfabrication**, and **low-power embedded firmware architectures**. 
 
-### 3. Color Theme Customization
-Both templates use an executive color palette. You can easily modify the primary accent color at the top of the files:
+---
 
-```latex
-% Default: Deep Professional Navy
-\definecolor{primary}{RGB}{15, 44, 89}
+## 🎓 Education & Academic Background
 
-% Alternative: Tech Slate Gray
-% \definecolor{primary}{RGB}{30, 41, 59}
+- **Master of Science in Electronic Engineering (Laurea Magistrale)**  
+  *University of Padua, Italy* · `Oct 2025 – Present`  
+  *Focus:* Advanced Analog Integrated Circuits, RF Electronics, Microtechnologies, and Signal Processing.
 
-% Alternative: Classic Pure Black (Monochrome)
-% \definecolor{primary}{RGB}{0, 0, 0}
+- **Erasmus+ MSc Exchange Student (Electrical Engineering / Electronics)**  
+  *Universiteit Gent (Ghent University), Belgium — Faculty of Engineering & Architecture* · `Sep 2026 – Jan 2027`  
+  *Completed 30 ECTS in English:*
+  - **Advanced Analog Design:** Transistor-level design, OTA topologies, noise analysis, frequency compensation.
+  - **IC Technology & Microsystems:** Semiconductor microfabrication flows, cleanroom processing, MEMS actuators & sensors.
+  - **Electromagnetic-aware High-Frequency Design:** RF parasitics, transmission line theory, high-speed signal integrity.
+  - **Internet of Things:** Low-power edge node architectures and sensor networks.
 
-% Alternative: Deep Emerald Green
-% \definecolor{primary}{RGB}{16, 88, 62}
+- **Bachelor of Science in Information Engineering**  
+  *University of Padua, Italy* · `Oct 2021 – Jul 2025`  
+  *Thesis:* **Underwater Acoustic Transducers Design & Development** — Research and parametric modeling of electroacoustic transducer topologies, piezoelectric materials, and acoustic impedance matching for underwater wireless telemetry (Supervised by *Prof. Filippo Campagnaro*).
+
+---
+
+## 🛠️ Core Technical Competencies
+
+- **Integrated Circuit Design & EDA Tools:** Transistor-level Analog IC Design, SPICE simulation, RF layout & parasitic modeling, AMD Vivado IDE, STM32CubeIDE, MATLAB & Simulink, LabVIEW, Wolfram Mathematica, Microfabrication / MEMS.
+- **Embedded Systems & IoT:** ARM Cortex-M (STM32), Low-Power Edge Node Architectures, FreeRTOS, Peripheral Interfaces (I2C, SPI, UART, ADC, DAC, PWM, DMA).
+- **Programming & Hardware Description:** C, C++, Python (Data acquisition, test automation, computer vision), VHDL, Verilog-HDL, Java, Kotlin, Linux, Git, Bash, LaTeX.
+- **Laboratory & Instrumentation:** Digital Storage Oscilloscopes (DSO), Logic Analyzers, Spectrum Analyzers, Arbitrary Function Generators, SMD Soldering & rework.
+- **Workplace Safety & Compliance:** Certified for High-Risk Laboratory Environments (Art. 37 D.Lgs. 81/08).
+
+---
+
+## 🤝 Leadership & Community Engagement
+
+- **Italian Referees Association (AIA) — Castelfranco Veneto Branch:**  
+  *Branch Committee Member, IT Coordinator & Regional Football Referee (2020 – Present)*  
+  Direct institutional IT and cloud infrastructure; officiate football matches at the regional and provincial levels. Honored with the *“Manuel Bailo” Award* (Best Branch Referee, 2022–2023 season) and serve as mentor for debutant referees.
+- **Azione Cattolica Italiana — Montebelluna (TV):**  
+  *Branch Committee Member & Youth Group Leader (2020 – Present)*  
+  Coordinate developmental, civic, and educational programs for adolescents aged 14–18.
+
+---
+
+## 📬 Contact & Connect
+
+- 💼 **LinkedIn:** [linkedin.com/in/giacomo-azzari](https://www.linkedin.com/in/giacomo-azzari)
+- ✉️ **Email:** [giacomoazzari@gmail.com](mailto:giacomoazzari@gmail.com)
+- 📍 **Location:** Padua / Montebelluna (TV), Italy · Ghent, Belgium
+
+---
+
+<details>
+<summary><b>🔧 Developer Notes & Local Compilation</b></summary>
+
+<br>
+
+Both CV versions are written in modern LaTeX and automatically compiled via GitHub Actions on every push.
+
+If you wish to compile locally with `pdflatex`:
+
+```bash
+# Compile the 1-page Industry Resume
+pdflatex -interaction=nonstopmode cv.tex
+
+# Compile the 2-page Extended CV
+pdflatex -interaction=nonstopmode cv_extended.tex
 ```
 
-### 4. Technical Skills & Projects
-The sections are categorized for electronic hardware and embedded systems roles:
-- **Hardware & EDA:** Altium Designer, KiCad, LTspice, Cadence Virtuoso.
-- **Embedded & MCUs:** STM32 (ARM Cortex-M), ESP32, AVR, FreeRTOS, I2C, SPI, UART, CAN.
-- **Software:** C, C++, Python, MATLAB/Simulink, VHDL/Verilog.
-- **Lab Instruments:** Oscilloscopes, Logic Analyzers, Spectrum Analyzers, Soldering.
-- **Leadership:** Highlights your civic advocacy and student initiatives in Montebelluna.
+Or using the included Makefile:
+```bash
+make          # Compiles both versions
+make clean    # Cleans auxiliary files (.aux, .log, .out)
+```
 
-You can modify or swap any project bullets to match specific job applications.
+</details>

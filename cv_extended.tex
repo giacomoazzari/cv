@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[left=1.4cm, right=1.4cm, top=1.3cm, bottom=1.3cm]{geometry}
+\usepackage[left=1.35cm, right=1.35cm, top=1.25cm, bottom=1.25cm]{geometry}
 \usepackage[english]{babel}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -32,6 +32,7 @@
 \definecolor{rulecolor}{RGB}{203, 213, 225}   % Soft divider line (#CBD5E1)
 
 \color{textdark}
+\linespread{1.05}                             % Relaxed line spacing for readability
 
 % --- RUNNING FOOTER ---
 \pagestyle{fancy}
@@ -50,19 +51,19 @@
     pdftitle={Giacomo Azzari - Curriculum Vitae (Extended)},
     pdfauthor={Giacomo Azzari},
     pdfsubject={Electronic Engineering Curriculum Vitae},
-    pdfkeywords={Electronic Engineering, Embedded Systems, Analog IC, Microfabrication, RF, VHDL, C++, STM32}
+    pdfkeywords={Electronic Engineering, Embedded Systems, Analog IC, Microfabrication, Computer Vision, Kotlin, C++}
 }
 
 % --- SECTION FORMATTING ---
 \titleformat{\section}
   {\large\bfseries\color{primary}}
   {}{0em}{}
-  [\vspace{-0.45em}\textcolor{rulecolor}{\titlerule[0.8pt]}\vspace{-0.2em}]
-\titlespacing*{\section}{0pt}{6.5pt}{3pt}
+  [\vspace{-0.35em}\textcolor{rulecolor}{\titlerule[0.8pt]}\vspace{-0.15em}]
+\titlespacing*{\section}{0pt}{7pt}{3.5pt}
 
 % --- CUSTOM COMMANDS ---
 \newcommand{\resumeItem}[1]{%
-  \item\small{{#1}\vspace{-1.5pt}}%
+  \item\small{#1}%
 }
 
 \newcommand{\resumeSubheading}[4]{%
@@ -70,17 +71,17 @@
   \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textcolor{secondary}{\small #2} \\
     \textit{\small #3} & \textcolor{secondary}{\textit{\small #4}} \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{%
   \vspace{1.5pt}
   \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textcolor{secondary}{\textit{\small #2}} \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{-2pt}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=1.8pt, topsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=1.5pt, parsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 % ==============================================================================
@@ -105,7 +106,7 @@
     \raggedleft
     \IfFileExists{photo.png}{%
         \begin{tikzpicture}
-            \node[circle, draw=rulecolor, line width=1pt, inner sep=0pt, minimum size=2.4cm,
+            \node[circle, draw=rulecolor, line width=0.8pt, inner sep=0pt, minimum size=2.4cm,
                   path picture={
                       \node at (path picture bounding box.center) {
                           \includegraphics[width=2.4cm,height=2.4cm]{photo.png}
@@ -120,12 +121,12 @@
         \end{tikzpicture}%
     }
 \end{minipage}
-\vspace{-4pt}
+\vspace{-2pt}
 
 % --- EXECUTIVE PROFILE ---
 \section{Executive Profile}
 \small{
-Electronic Engineer currently enrolled in the Master's Degree program in Electronic Engineering at the \textbf{University of Padua}, enriched by an Erasmus+ exchange semester at \textbf{Ghent University (Universiteit Gent, Belgium)}. Specialized in advanced analog integrated circuit design, semiconductor microfabrication, high-frequency electromagnetic layout, and embedded edge systems. Solid experimental background in electroacoustics and transducer engineering developed during bachelor's thesis research. Proven leadership, rapid decision-making under intense pressure, and communication abilities demonstrated through regional football refereeing and institutional IT management for the Italian Referees Association (AIA).
+Electronic Engineer currently enrolled in the Master's Degree program in Electronic Engineering at the \textbf{University of Padua}, enriched by an Erasmus+ exchange semester at \textbf{Ghent University (Universiteit Gent, Belgium)}. Specialized in advanced analog integrated circuit design, semiconductor microtechnologies, high-frequency layout, and computer vision algorithms. Solid experimental background in electroacoustics and transducer engineering developed during bachelor's thesis research. Proven leadership, rapid decision-making under intense pressure, and communication abilities demonstrated through regional football refereeing and digital systems administration for the Italian Referees Association (AIA).
 }
 
 % --- EDUCATION & ACADEMIC QUALIFICATIONS ---
@@ -135,15 +136,15 @@ Electronic Engineer currently enrolled in the Master's Degree program in Electro
   {University of Padua}{Padua, Italy}
   {Master's Degree in Electronic Engineering (Laurea Magistrale)}{Oct 2025 -- Present}
   \resumeItemListStart
-    \resumeItem{\textbf{Curriculum:} Advanced Electronic Circuits, Microtechnologies, Embedded Systems, and Signal Processing (EQF Level 7).}
+    \resumeItem{\textbf{Curriculum:} Advanced Electronic Circuits, Microtechnologies, Signal Processing, and Applied Electromagnetics (EQF Level 7).}
   \resumeItemListEnd
 
 \resumeSubheading
   {Universiteit Gent (Ghent University) --- Faculty of Engineering \& Architecture}{Ghent, Belgium}
   {Erasmus+ Exchange: MSc in Electrical Engineering (Electronic Circuits \& Systems)}{Sep 2026 -- Jan 2027}
   \resumeItemListStart
-    \resumeItem{\textbf{Academic Curriculum:} 30 ECTS completed entirely in English across 4 graduate modules:}
-    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt, topsep=1pt]
+    \resumeItem{\textbf{Academic Curriculum:} 30 ECTS completed entirely in English across 4 specialized graduate modules:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
       \small
       \item \textbf{Advanced Analog Design:} Transistor-level analog circuit design, multi-stage amplifier and OTA topologies, frequency compensation techniques, noise budgeting, and circuit verification.
       \item \textbf{Technology of Integrated Circuits \& Microsystems:} Semiconductor microfabrication processing (photolithography, chemical doping, thin-film deposition, wet/dry etching), cleanroom flows, packaging, and MEMS sensor integration.
@@ -157,7 +158,7 @@ Electronic Engineer currently enrolled in the Master's Degree program in Electro
   {Bachelor's Degree in Electronic Engineering (Laurea Triennale in Ingegneria Elettronica)}{Sep 2022 -- Sep 2025}
   \resumeItemListStart
     \resumeItem{\textbf{Final Grade:} 99/110 (183 ECTS, EQF Level 6).}
-    \resumeItem{\textbf{Bachelor Thesis:} \textit{``Design and development of underwater acoustic transducers''} --- Supervisor: Prof. Filippo Campagnaro. Investigated electroacoustic transducer geometries, piezoelectric transduction mechanisms, and acoustic impedance matching for underwater acoustic telemetry links.}
+    \resumeItem{\textbf{Bachelor Thesis:} \href{https://hdl.handle.net/20.500.12608/92478}{\textit{``Design and development of underwater acoustic transducers''}} (\href{https://hdl.handle.net/20.500.12608/92478}{Handle: 20.500.12608/92478}) --- Supervisor: Prof. Filippo Campagnaro. Researched electroacoustic transducer topologies, piezoelectric transduction mechanisms, and acoustic impedance matching for underwater acoustic telemetry links.}
     \resumeItem{\textbf{Core Coursework:} Microelectronics, Analog \& Digital Electronics, Signals \& Systems, Circuit Theory, Automatic Control Systems, Electromagnetic Fields, Computer Architectures.}
   \resumeItemListEnd
 
@@ -170,48 +171,47 @@ Electronic Engineer currently enrolled in the Master's Degree program in Electro
 
 % --- TECHNICAL COMPETENCIES ---
 \section{Technical Competencies}
-\begin{itemize}[leftmargin=1.15em, itemsep=2pt, topsep=1pt, parsep=0pt]
+\begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=1.5pt, parsep=0pt]
     \small{
-    \item{\textbf{Circuit Design \& EDA Tools:} AMD Vivado IDE, STM32CubeIDE, MATLAB \& Simulink, LabVIEW, Wolfram Mathematica, SPICE circuit simulation, Transistor-Level Analog IC Design, RF Layout \& Parasitic Modeling, Microfabrication / MEMS.}
-    \item{\textbf{Programming \& Hardware Description:} C, C++, Python (Data acquisition \& test automation), VHDL, Verilog-HDL, Java, Kotlin, HTML, LaTeX, Linux, Git, Bash.}
-    \item{\textbf{Embedded Systems \& IoT:} ARM Cortex-M (STM32), Low-Power Edge Node Architectures, FreeRTOS, Peripheral Interfaces (I2C, SPI, UART, ADC, DAC, PWM, DMA).}
+    \item{\textbf{Programming \& Hardware Description:} C, C++, Python (Data acquisition \& test automation), Kotlin, Java, VHDL, Verilog-HDL, HTML, LaTeX, Git, Bash.}
+    \item{\textbf{Circuit Design \& EDA Tools:} Cadence Virtuoso, AMD Vivado, STM32CubeIDE, Android Studio, MATLAB \& Simulink, LabVIEW, Wolfram Mathematica, SPICE circuit simulation.}
+    \item{\textbf{Office Automation:} Advanced Spreadsheets (financial/engineering modeling, data analysis), Word Processing, Presentation Software.}
     \item{\textbf{Laboratory \& Measurement:} Digital Storage Oscilloscopes (DSO), Logic Analyzers, Spectrum Analyzers, Signal Generators, SMD Soldering.}
+    \item{\textbf{Languages:} Italian (Native speaker), English (Professional Working Proficiency --- Cambridge FCE B2; full master's courses at Ghent in English), German (B1 level --- 5-year bilingual high school curriculum), Spanish (B1 level, Spoken).}
     }
 \end{itemize}
 
-\newpage % EXPLICIT PAGE BREAK FOR BALANCED 2-PAGE LAYOUT
+\newpage % EXPLICIT PAGE BREAK FOR PERFECT 2-PAGE BALANCE
 
-% --- FEATURED ENGINEERING & RESEARCH PROJECTS ---
-\section{Featured Engineering \& Research Projects}
+% --- FEATURED ENGINEERING & ACADEMIC PROJECTS ---
+\section{Featured Engineering \& Academic Projects}
 
 \resumeProjectHeading
-  {\textbf{Underwater Acoustic Transducers Design \& Development} \ \textbar\ \ \normalfont{\textit{Acoustics, Materials, Transduction}}}{BSc Thesis Research Project}
+  {\textbf{Computer Vision for Autonomous Driving (Lane Detection)} \ \textbar\ \ \normalfont{\textit{Python, OpenCV, Image Processing}}}{Academic Project \ \textbullet\ \ Grade: 30/30}
   \resumeItemListStart
-    \resumeItem{Researched and modeled electroacoustic transducer topologies for underwater wireless communication and telemetry links.}
-    \resumeItem{Analyzed piezoelectric materials, resonance frequencies, and acoustic impedance matching layers between transducer and water medium.}
-    \resumeItem{Performed parametric frequency-response simulations and characterization under the supervision of Prof. Filippo Campagnaro.}
+    \resumeItem{Engineered a camera-based computer vision pipeline for autonomous driving lane boundary identification and tracking.}
+    \resumeItem{Implemented color-space thresholding, Sobel edge filtering, perspective bird's-eye view transformations, and sliding-window polynomial fitting to compute road curvature.}
   \resumeItemListEnd
 
 \resumeProjectHeading
-  {\textbf{Transistor-Level Advanced Analog CMOS IC Design} \ \textbar\ \ \normalfont{\textit{Cadence / SPICE, OTA, Analog IC}}}{Ghent University MSc Coursework}
+  {\textbf{Transistor-Level CMOS OTA Design} \ \textbar\ \ \normalfont{\textit{Cadence Virtuoso, SPICE}}}{Univ. of Padua \& Ghent Univ.}
   \resumeItemListStart
-    \resumeItem{Architected high-gain Operational Transconductance Amplifiers (OTAs) at the transistor level with optimized biasing networks.}
-    \resumeItem{Engineered Miller frequency compensation networks to ensure robust stability margins ($>60^\circ$ phase margin) under capacitive loading.}
-    \resumeItem{Executed noise spectral density analysis, transient slew-rate simulations, and PVT corner verification.}
+    \resumeItem{Architected and sized high-gain Operational Transconductance Amplifiers (OTAs) at the transistor level with robust biasing networks.}
+    \resumeItem{Designed Miller frequency compensation networks to ensure stability margins ($>60^\circ$ phase margin) under capacitive loading; evaluated transient slew rate and input-referred thermal noise.}
   \resumeItemListEnd
 
 \resumeProjectHeading
-  {\textbf{Electromagnetic-Aware RF Design \& Signal Integrity} \ \textbar\ \ \normalfont{\textit{RF Layout, Transmission Lines, SI}}}{Ghent University MSc Coursework}
+  {\textbf{Native Android Application Development} \ \textbar\ \ \normalfont{\textit{Kotlin, Android Studio}}}{University Mobile Project}
   \resumeItemListStart
-    \resumeItem{Modeled microstrip transmission lines, differential pairs, and via transitions to minimize high-frequency reflections and parasitics.}
-    \resumeItem{Performed EM co-simulation to evaluate high-speed interconnect signal integrity (SI) and eye-diagram degradation.}
+    \resumeItem{Designed and implemented a native Android application using Kotlin, applying modern architectural principles and UI layout standards.}
+    \resumeItem{Handled asynchronous background processing, application lifecycle states, and local SQLite/Room data persistence.}
   \resumeItemListEnd
 
 \resumeProjectHeading
-  {\textbf{Low-Power Embedded IoT Node Architecture} \ \textbar\ \ \normalfont{\textit{STM32, FreeRTOS, C, Low-Power Telemetry}}}{Embedded Systems Project}
+  {\textbf{Underwater Acoustic Transducers Design \& Development} \ \textbar\ \ \normalfont{\textit{Electroacoustics, Simulation}}}{BSc Thesis Research Project}
   \resumeItemListStart
-    \resumeItem{Designed and implemented modular firmware for an STM32-based low-power sensor node collecting ambient telemetry data.}
-    \resumeItem{Configured circular DMA buffers and peripheral sleep modes to minimize current consumption during inactive states.}
+    \resumeItem{Researched and modeled electroacoustic transducer topologies for underwater wireless communication and telemetry links (\href{https://hdl.handle.net/20.500.12608/92478}{Handle: 20.500.12608/92478}).}
+    \resumeItem{Analyzed piezoelectric materials, resonance frequencies, and acoustic impedance matching layers between transducer and water medium under the supervision of Prof. Filippo Campagnaro.}
   \resumeItemListEnd
 
 % --- LEADERSHIP & ORGANIZATIONAL EXPERIENCE ---
@@ -219,19 +219,19 @@ Electronic Engineer currently enrolled in the Master's Degree program in Electro
 
 \resumeSubheading
   {Italian Referees Association (AIA) --- Castelfranco Veneto Branch}{Veneto, Italy}
-  {Board Member, IT Lead \& Regional Football Referee}{Jan 2020 -- Present}
+  {Branch Committee Member, IT Coordinator \& Regional Football Referee}{Jan 2020 -- Present}
   \resumeItemListStart
-    \resumeItem{\textbf{Member of the Board of Directors \& IT Lead (2022--Present):} Direct institutional IT infrastructure, official branch web platform, and administrative cloud accounts for hundreds of members.}
+    \resumeItem{\textbf{Branch Committee Member \& IT Coordinator (2022--Present):} Direct institutional IT infrastructure, official branch web platform, and administrative cloud accounts for the branch membership.}
     \resumeItem{\textbf{Communications \& Editorial Team (2021--Present):} Author official branch articles, produce digital graphics, and co-manage official social media channels.}
-    \resumeItem{\textbf{Regional Referee (OTR, 2023--Present):} Officiate high-stakes regional and provincial football fixtures. Developed instant decision-making under intense pressure, dispute de-escalation, and authoritative leadership.}
+    \resumeItem{\textbf{Regional Referee (2023--Present):} Officiate football fixtures at regional and provincial levels. Developed instant decision-making under intense pressure, dispute de-escalation, and leadership.}
     \resumeItem{\textbf{Recognition \& Tutoring:} Honored with the prestigious \textit{``Manuel Bailo'' Award} as Best Branch Referee (2022--2023 season); serve as tutor/mentor for newly certified referees during their debut fixtures.}
   \resumeItemListEnd
 
 \resumeSubheading
   {Azione Cattolica Italiana}{Montebelluna (TV), Italy}
-  {Head of Youth Group \& Youth Educator}{Sep 2020 -- Present}
+  {Branch Committee Member \& Youth Group Leader}{Sep 2020 -- Present}
   \resumeItemListStart
-    \resumeItem{\textbf{Board Member \& Head of Youth Group (Oct 2023--Present):} Coordinate educational, civic, and developmental programs for teenagers aged 14--18.}
+    \resumeItem{\textbf{Branch Committee Member (Oct 2023--Present):} Coordinate educational, civic, and developmental programs for teenagers aged 14--18.}
     \resumeItem{\textbf{Youth Educator (Sep 2020--Present):} Lead weekly formation sessions, mentoring adolescents in teamwork and ethical values; supervise summer educational camps and leadership retreats.}
   \resumeItemListEnd
 
@@ -245,21 +245,32 @@ Electronic Engineer currently enrolled in the Master's Degree program in Electro
     \resumeItem{Coordinated banquet hall assembly, event logistics, and direct customer service during large-scale private and corporate events. Demonstrates hands-on work ethic, multitasking under pressure, situational problem-solving, and team dependability.}
   \resumeItemListEnd
 
-% --- CERTIFICATIONS & LANGUAGES ---
-\section{Certifications \& Languages}
-\begin{itemize}[leftmargin=1.15em, itemsep=2pt, topsep=1pt, parsep=0pt]
+% --- CERTIFICATIONS & SAFETY ---
+\section{Certifications \& Workplace Safety}
+\begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=1.5pt, parsep=0pt]
     \small{
     \item{\textbf{Occupational Health \& Safety (Laboratories):} Certified for Laboratory Personnel --- \textbf{HIGH Risk Class} (Università degli Studi di Padova, pursuant to Art. 37 D.Lgs. 81/08; Valid until Oct 2029).}
     \item{\textbf{General Workplace Safety:} University of Padua safety certification (pursuant to Art. 37 D.Lgs. 81/08).}
-    \item{\textbf{Languages:}
-      \textbf{Italian} (Native speaker),
-      \textbf{English} (Professional Working Proficiency --- Cambridge First Certificate in English / FCE, CEFR B2; all graduate coursework, laboratory sessions, and examinations at Ghent University conducted in English),
-      \textbf{German} (B1 level --- 5-year bilingual scientific high school curriculum).}
     }
 \end{itemize}
 
-% --- PRIVACY STATEMENT (GDPR) ---
+% --- PRIVACY STATEMENT & SIGNATURE BLOCK ---
+\vspace{10pt}
 \vfill
-\noindent\centering{\footnotesize\textcolor{secondary}{\textit{In compliance with the Italian Legislative Decree no. 196/2003 and EU GDPR 2016/679, I hereby authorize the processing of my personal data.}}}\par
+\noindent
+\begin{minipage}[b]{0.65\textwidth}
+    \footnotesize\textcolor{secondary}{\textit{In compliance with the Italian Legislative Decree no. 196/2003 and EU GDPR 2016/679, I hereby authorize the processing of my personal data.}} \\[10pt]
+    {\footnotesize\textcolor{secondary}{Montebelluna (TV), Italy \quad\textbar\quad Ghent, Belgium}}
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.32\textwidth}
+    \raggedleft
+    \IfFileExists{signature.png}{%
+        \includegraphics[height=1.05cm]{signature.png} \\[2pt]
+    }{%
+        \vspace{1.05cm}
+    }
+    {\small\textbf{Giacomo Azzari}}
+\end{minipage}
 
 \end{document}
