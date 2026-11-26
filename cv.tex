@@ -49,8 +49,8 @@
 \titleformat{\section}
   {\large\bfseries\color{primary}}
   {}{0em}{}
-  [\vspace{-0.35em}\textcolor{rulecolor}{\titlerule[0.8pt]}\vspace{-0.1em}]
-\titlespacing*{\section}{0pt}{6pt}{3pt}
+  [\vspace{-0.35em}\textcolor{rulecolor}{\titlerule[0pt]}\vspace{-0.1em}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
 
 % --- CUSTOM COMMANDS ---
 \newcommand{\resumeItem}[1]{%
@@ -58,7 +58,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{%
-  \vspace{1.5pt}
+  \vspace{0.5pt}
   \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textcolor{secondary}{\small #2} \\
     \textit{\small #3} & \textcolor{secondary}{\textit{\small #4}} \\
@@ -66,14 +66,14 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{%
-  \vspace{1.5pt}
+  \vspace{0.5pt}
   \noindent\begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textcolor{secondary}{\textit{\small #2}} \\
   \end{tabular*}\vspace{-2pt}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=1.5pt, parsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=0.5pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 % ==============================================================================
 % DOCUMENT STARTS HERE
@@ -113,42 +113,40 @@
         \end{tikzpicture}%
     }
 \end{minipage}
-\vspace{-4pt}
+\vspace{2pt}
+\hrule
 
 % --- EDUCATION ---
 \section{Education}
 
 \resumeSubheading
   {University of Padua}{Padua, Italy}
-  {Master's Degree in Electronic Engineering (Laurea Magistrale)}{Oct 2025 -- Present}
-  \resumeItemListStart
-    \resumeItem{\textbf{Specialization:} Advanced Analog Integrated Circuits, RF Electronics, Microtechnologies, and Signal Processing.}
-  \resumeItemListEnd
+  {Master's Degree in Electronic Engineering}{Oct 2025 -- Present}
 
 \resumeSubheading
-  {Universiteit Gent (Ghent University) --- Faculty of Engineering \& Architecture}{Ghent, Belgium}
-  {Erasmus+ MSc Exchange Student (Electrical Engineering / Electronic Circuits \& Systems)}{Sep 2026 -- Jan 2027}
+  {Ghent University, Faculty of Engineering and Architecture}{Ghent, Belgium}
+  {Erasmus+ MSc Exchange Student (Electrical Engineering, Electronic Circuits \& Systems curriculum)}{Sep 2026 -- Jan 2027}
   \resumeItemListStart
-    \resumeItem{\textbf{Completed 30 ECTS in English:} Advanced Analog Design, Technology of ICs \& Microsystems, Electromagnetic-aware High Frequency Design, and Internet of Things.}
+    \resumeItem{\textbf{30 ECTS in:} Advanced Analog Design, Technology of ICs \& Microsystems, Electromagnetic-aware High Frequency Design, Internet of Things.}
   \resumeItemListEnd
 
 \resumeSubheading
   {University of Padua}{Padua, Italy}
   {Bachelor's Degree in Electronic Engineering (Laurea Triennale in Ingegneria Elettronica)}{Sep 2022 -- Sep 2025}
   \resumeItemListStart
-    \resumeItem{\textbf{Final Grade:} 99/110 (183 ECTS). Core focus: Microelectronics, Signals \& Systems, Circuit Theory, Controls.}
-    \resumeItem{\textbf{Bachelor Thesis:} \href{https://hdl.handle.net/20.500.12608/92478}{\textit{``Design and development of underwater acoustic transducers''}} (\href{https://hdl.handle.net/20.500.12608/92478}{Handle: 20.500.12608/92478}) --- Supervisor: Prof. Filippo Campagnaro. Researched electroacoustic transducer topologies and acoustic impedance matching layers.}
+    \resumeItem{\textbf{Final Grade:} 99/110 | 183 ECTS.}
+    \resumeItem{\textbf{Bachelor Thesis:} \href{https://hdl.handle.net/20.500.12608/92478}{\textit{''Design and development of underwater acoustic transducers''}} (\href{https://hdl.handle.net/20.500.12608/92478}{Handle: 20.500.12608/92478}) -- Supervisor: Prof. Filippo Campagnaro.}
   \resumeItemListEnd
 
 % --- TECHNICAL SKILLS ---
 \section{Technical Skills}
 \begin{itemize}[leftmargin=1.15em, itemsep=2.2pt, topsep=1.5pt, parsep=0pt]
     \small{
-    \item{\textbf{Programming \& Hardware Description:} C, C++, Python, Kotlin, Java, VHDL, Verilog-HDL, HTML, LaTeX, Git, Bash.}
+    \item{\textbf{Programming languages:} C, C++, Java, Python, Kotlin, VHDL, Verilog-HDL, HTML, LaTeX, Git, Bash.}
     \item{\textbf{Engineering CAD \& Simulation:} Cadence Virtuoso, AMD Vivado, STM32CubeIDE, Android Studio, MATLAB \& Simulink, LabVIEW, Wolfram Mathematica, SPICE circuit simulation.}
     \item{\textbf{Office Automation:} Advanced Spreadsheets (modeling and data analysis), Word Processing, Presentation Software.}
     \item{\textbf{Laboratory \& Safety:} Certified High-Risk Laboratory Safety (D.Lgs. 81/08, valid to 2029); Oscilloscopes, Logic Analyzers.}
-    \item{\textbf{Languages:} Italian (Native), English (B2 / Cambridge FCE; master's degree coursework conducted entirely in English), German (B1), Spanish (B1, Spoken).}
+    \item{\textbf{Languages:} Italian (Native), English (B2 certified Cambridge FCE; master's degree entirely in English), German (B1), Spanish (B1).}
     }
 \end{itemize}
 
@@ -156,44 +154,54 @@
 \section{Academic \& Engineering Projects}
 
 \resumeProjectHeading
-  {\textbf{Computer Vision for Autonomous Driving (Lane Detection)} \ \textbar\ \ \normalfont{\textit{Python, OpenCV, Image Processing}}}{Grade: 30/30}
+  {\textbf{Underwater Acoustic Transducers Design} \ \textbar\ \ \normalfont{\textit{Electroacoustics, Simulation}}}{BSc Thesis Research Project}
+  \resumeItemListStart
+    \resumeItem{Researched and modeled electroacoustic transducers and matching layers for underwater communications (\href{https://hdl.handle.net/20.500.12608/92478}{Thesis Webpage}).}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Computer Vision for Autonomous Driving (Lane Detection)} \ \textbar\ \ \normalfont{\textit{Python, OpenCV, Image Processing}}}{UniPD exam, grade: 30/30}
   \resumeItemListStart
     \resumeItem{Developed a camera-based lane identification pipeline for autonomous vehicle perception, applying edge filtering, perspective transforms, and polynomial lane boundary fitting.}
   \resumeItemListEnd
 
 \resumeProjectHeading
-  {\textbf{Transistor-Level CMOS OTA Design} \ \textbar\ \ \normalfont{\textit{Cadence Virtuoso, SPICE}}}{Univ. of Padua \& Ghent Univ.}
+  {\textbf{Transistor-Level CMOS OTA Design} \ \textbar\ \ \normalfont{\textit{Cadence Virtuoso, SPICE}}}{Univ. of Padua \& Ghent Univ. projects}
   \resumeItemListStart
-    \resumeItem{Designed and sized multi-stage Operational Transconductance Amplifiers (OTAs) at the transistor level; simulated frequency compensation, stability ($>60^\circ$ phase margin), and noise performance.}
+    \resumeItem{Designed and sized multi-stage Operational Transconductance Amplifiers (OTAs) at the transistor level; simulated frequency compensation, stability and noise performance.}
   \resumeItemListEnd
 
 \resumeProjectHeading
-  {\textbf{Native Android Application Development} \ \textbar\ \ \normalfont{\textit{Kotlin, Android Studio}}}{University Project}
+  {\textbf{''\textit{Europe}'': Native Android application for foldable devices} \ \textbar\ \ \normalfont{\textit{Kotlin, Android Studio}}}{Univ. of Padua Project}
   \resumeItemListStart
-    \resumeItem{Built a native Android mobile application with modern responsive UI, structured activity lifecycle, and local data persistence.}
+    \resumeItem{Built a native Android mobile application with modern responsive UI, designed for foldable devices, structured activity lifecycle, and local data persistence. (\href{https://github.com/giacomoazzari/Europe}{Github repository})}
   \resumeItemListEnd
 
-\resumeProjectHeading
-  {\textbf{Underwater Acoustic Transducers Design} \ \textbar\ \ \normalfont{\textit{Electroacoustics, Simulation}}}{BSc Thesis Research Project}
+% --- WORK & OPERATIONAL EXPERIENCE ---
+\section{Work Experience}
+
+\resumeSubheading
+  {Catering \& Banqueting Company ``Rangiarse Srl''}{Mogliano Veneto (TV), Italy}
+  {Service Staff \& Banquet Hall Operations}{Nov 2019 -- Present}
   \resumeItemListStart
-    \resumeItem{Researched and modeled electroacoustic transducers and matching layers for underwater telemetry (\href{https://hdl.handle.net/20.500.12608/92478}{Thesis Webpage}).}
+    \resumeItem{Coordinated banquet hall assembly, event logistics, and direct customer service during large-scale private and corporate events. Demonstrates hands-on work ethic, multitasking under pressure, situational problem-solving, and team dependability.}
   \resumeItemListEnd
 
 % --- LEADERSHIP & ACTIVITIES ---
-\section{Leadership \& Activities}
+\section{Social and Volunteering Activities}
 
 \resumeSubheading
   {Italian Referees Association (AIA) --- Castelfranco Veneto Branch}{Veneto, Italy}
-  {Branch Committee Member, IT Coordinator \& Regional Referee}{Jan 2020 -- Present}
+  {Referee, Committee Member, IT Coordinator}{Jan 2020 -- Present}
   \resumeItemListStart
-    \resumeItem{\textbf{Branch Committee Member \& IT Coordinator (2022--Present):} Managed branch digital systems, website, and institutional cloud accounts; contributed to the communications team.}
-    \resumeItem{\textbf{Regional Referee (2023--Present):} Officiated football matches at regional and provincial levels. Developed rapid decision-making under high pressure, conflict de-escalation, and leadership.}
-    \resumeItem{\textbf{Recognition \& Mentoring:} Awarded the \textit{``Manuel Bailo'' Award} for Best Referee of the Season (2022--2023); served as tutor for debutant referees.}
+  	\resumeItem{\textbf{Regional Referee (2023--Present):} Officiated football matches at regional and provincial levels. Developed rapid decision-making under high pressure, conflict de-escalation, and leadership.}
+    \resumeItem{\textbf{Committee Member \& IT Coordinator  (2022--Present):} Managed digital systems, website, and institutional cloud accounts; contributed to the communications team as author of journalistic articles, produced digital graphics and co-manage official social media channels.}
+    \resumeItem{\textbf{''\textit{Manuel Bailo}'' Award} as best referee of the Season (2022--2023).}
   \resumeItemListEnd
 
 \resumeSubheading
   {Azione Cattolica Italiana}{Montebelluna (TV), Italy}
-  {Branch Committee Member \& Youth Group Leader}{Sep 2020 -- Present}
+  {Board Member and Youth Group Coordinator}{Sep 2020 -- Present}
   \resumeItemListStart
     \resumeItem{Coordinate weekly formation programs, educational retreats, and social activities for teenagers (ages 14--18).}
   \resumeItemListEnd
@@ -208,9 +216,9 @@
 \begin{minipage}[b]{0.32\textwidth}
     \raggedleft
     \IfFileExists{signature.png}{%
-        \includegraphics[height=0.85cm]{signature.png} \\[1pt]
+        \includegraphics[height=1cm]{signature.png} \\[1pt]
     }{%
-        \vspace{0.85cm}
+        \vspace{0.1cm}
     }
     {\footnotesize\textbf{Giacomo Azzari}}
 \end{minipage}

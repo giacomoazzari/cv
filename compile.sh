@@ -29,14 +29,14 @@ clean_aux() {
 
 build_1page() {
     echo "==> Compiling 1-Page Industry CV (cv.tex)..."
-    $PDFLATEX -interaction=nonstopmode cv.tex >/dev/null
+    $PDFLATEX -interaction=nonstopmode cv.tex >/dev/null 2>&1 || true
     $PDFLATEX -interaction=nonstopmode cv.tex
     echo "Successfully generated: cv.pdf"
 }
 
 build_2page() {
     echo "==> Compiling 2-Page Extended CV (cv_extended.tex)..."
-    $PDFLATEX -interaction=nonstopmode cv_extended.tex >/dev/null
+    $PDFLATEX -interaction=nonstopmode cv_extended.tex >/dev/null 2>&1 || true
     $PDFLATEX -interaction=nonstopmode cv_extended.tex
     echo "Successfully generated: cv_extended.pdf"
 }
